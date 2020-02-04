@@ -33,14 +33,14 @@ steps:
     command: 'restore'
     projects: '**/*.csproj'
 
-- task: DotNetCoreCLI@3
+- task: DotNetCoreCLI@2
   displayName: 'Build the project - Release'
   inputs:
     command: 'build'
     arguments: '--no-restore --configuration Release'
     projects: '**/*.csproj'
 
-- task: DotNetCoreCLI@3
+- task: DotNetCoreCLI@2
   displayName: 'Publish the project - Release'
   inputs:
     command: 'publish'
