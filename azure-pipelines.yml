@@ -7,7 +7,7 @@ pool:
     - npm
 
 steps:
-- task: UseDotNet@3
+- task: UseDotNet@2
   displayName: 'Use .NET Core SDK 3.1.100'
   inputs:
     version: 3.1.100
@@ -27,7 +27,7 @@ steps:
   displayName: 'Write build info'
   workingDirectory: Tailspin.SpaceGame.Web/wwwroot
 
-- task: DotNetCoreCLI@3
+- task: DotNetCoreCLI@2
   displayName: 'Restore project dependencies'
   inputs:
     command: 'restore'
